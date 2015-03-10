@@ -2,7 +2,11 @@ import random
 
 def sort(items):
   # 1. TO DO: Implement a "bubble sort" routine here
-  pass
+	for position in range(len(items)-1, 0, -1):
+		for i in range(position):
+			if items[i] > items[i+1]:
+				items[i], items[i+1] = items[i+1], items[i]
+	return items
 
 
 numbers = list(range(10))
@@ -13,4 +17,4 @@ print("The list was sorted correctly!")
 
 # 2. Change this print statement to display the complexity category.
 #    Refer to the cheat sheet in week9-class for examples.
-print("This algorithm is classified as: O(....)")
+print("This algorithm is classified as: O(n^2)")
